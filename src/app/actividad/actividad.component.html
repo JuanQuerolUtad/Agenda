@@ -1,0 +1,20 @@
+
+
+    
+        <input type="date" [(ngModel)]="nuevaActividad.fecha" placeholder="Fecha" required>
+        <input type="text" [(ngModel)]="nuevaActividad.hora" placeholder="Hora" required>
+        <input type="text" [(ngModel)]="nuevaActividad.texto" placeholder="Texto" required>
+        <input type="text" [(ngModel)]="nuevaActividad.detalle" placeholder="Detalle">
+        
+        <button (click)="agregarActividad()"type="submit">Agregar Actividad</button>
+    
+    <div *ngFor="let actividad of actividades" id="creadas">
+        <div>{{ actividad.fecha | date }}</div>
+        <div>{{ actividad.hora }}</div>
+        <div>{{ actividad.texto }}</div>
+        <div>{{ actividad.detalle }}</div>
+        <div>{{ actividad.estado }}</div>
+        <button >-</button>
+    </div>
+
+
